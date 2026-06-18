@@ -16,13 +16,14 @@ def test_temperature(temp_str: str) -> None:
         temperature = input_temperature(temp_str)
     except ValueError:
         print(
-            "Caught input_temperature error: "
-            ,"invalid literal for int() with base 10: '"
-            ,temp_str
-            ,"'"
+            "Caught input_temperature error: ",
+            "invalid literal for int() with base 10: '",
+            temp_str,
+            "'",
         )
     else:
         print(f"Temperature is now {temperature}°C")
+
 
 if __name__ == "__main__":
     print("=== Garden Temperature ===\n")
