@@ -14,7 +14,7 @@ def test_temperature(temp_str: str) -> None:
     """Checks if input_temperature() was succesfull"""
     try:
         temperature = input_temperature(temp_str)
-    except ValueError as exc:
+    except ValueError:
         print(
             "Caught input_temperature error: "
             ,"invalid literal for int() with base 10: '"
