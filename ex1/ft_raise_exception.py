@@ -31,15 +31,9 @@ def test_temperature(temp_str: str) -> None:
     except OutOfRangeError:
         temperature = int(temp_str)
         if temperature < 0:
-            print(
-            temperature,
-            "°C is too cold for plants (min 0°C)"
-        )
+            print(temperature, "°C is too cold for plants (min 0°C)")
         elif temperature > 40:
-            print(
-                temperature,
-                "°C is too hot for plants (max 40°C)"
-            )
+            print(temperature, "°C is too hot for plants (max 40°C)")
     else:
         print(f"Temperature is now {temperature}°C")
 
