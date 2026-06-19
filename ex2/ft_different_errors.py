@@ -1,4 +1,5 @@
 def garden_operations(operation_number: int):
+    """Returns faulty code depending on operation number"""
     match operation_number:
         case 0:
             return int("abc")
@@ -14,6 +15,7 @@ def garden_operations(operation_number: int):
         
 
 def test_error_type() -> None:
+    """Shows each type of error happening"""
     operation_number = 0
     while (operation_number < 4):
         operation_number += 1
