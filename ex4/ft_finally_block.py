@@ -44,7 +44,7 @@ def test_watering_system(plants: tuple[str, ...]) -> None:
                 water_plant(plant)
             except PlantError as msg:
                 print(msg)
-                print("Ending tests and returning to main")
+                print(".. ending tests and returning to main")
                 return
     finally:
         print("Closing watering system")
@@ -55,3 +55,7 @@ if __name__ == "__main__":
     print("=== Garden Watering System ===\n")
     print("Tesing valid plants...")
     test_watering_system(tuple_1)
+    print("\nTesting invalid plants...")
+    tuple_2 = ("Tomato", "lettuce", "Carrots")
+    test_watering_system(tuple_2)
+    print("\nCleanup always happens, even with errors")
