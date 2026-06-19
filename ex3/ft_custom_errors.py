@@ -5,8 +5,9 @@ class GardenError(Exception):
         self.message = message
         super().__init__(self.message)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.message}"
+
 
 class PlantError(GardenError):
     """GardenError for problems with plants"""
@@ -15,7 +16,7 @@ class PlantError(GardenError):
         self.message = message
         super().__init__(self.message)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.message}"
 
 
@@ -26,9 +27,10 @@ class WaterError(GardenError):
         self.message = message
         super().__init__(self.message)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.message}"
-    
+
+
 def plant_error_tester(error_number: int, error_message: str) -> None:
     """Raises a different exception depending on error number"""
 
@@ -39,7 +41,7 @@ def plant_error_tester(error_number: int, error_message: str) -> None:
             raise PlantError(error_message)
         case 2:
             raise WaterError(error_message)
-        case __:
+        case _:
             return
 
 

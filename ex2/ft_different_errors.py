@@ -1,18 +1,18 @@
-def garden_operations(operation_number: int):
+def garden_operations(operation_number: int) -> None:
     """Returns faulty code depending on operation number"""
     match operation_number:
         case 0:
-            return int("abc")
+            int("abc")
         case 1:
-            return 1/0
+            1/0
         case 2:
-            return open("/non/existent/file")
+            open("/non/existent/file")
         case 3:
-            return 1 + "abc"
+            1 + "abc"
         case _:
             print("Operation completed successfully")
-            return
-        
+            return None
+
 
 def test_error_type() -> None:
     """Shows each type of error happening"""
