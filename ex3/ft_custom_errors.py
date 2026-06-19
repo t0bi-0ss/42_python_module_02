@@ -59,4 +59,9 @@ def exception_handler(error_number: int, error_message: str) -> None:
 if __name__ == "__main__":
     print("=== Custom Garden Errors Demo ===\n")
     print("Testing PlantError...")
-    exception_handler(1, "Caught PlantError: The tomato plant is wilting")
+    exception_handler(1, "Caught PlantError: The tomato plant is wilting!\n")
+    print("Testing WaterError...")
+    exception_handler(2, "Caught WaterError: Not enough water in the tank!\n")
+    print("Testing catching all garden errors...")
+    exception_handler(0, "Caught GardenError: The tomato plant is wilting!")
+    exception_handler(0, "Caught GardenError: Not enough water in the tank!")
