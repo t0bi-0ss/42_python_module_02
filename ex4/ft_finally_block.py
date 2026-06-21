@@ -29,20 +29,12 @@ def water_plant(plant_name: str) -> None:
 
 def test_watering_system(plants: tuple[str, ...]) -> None:
     print("Opening watering system")
-    for plant in plants:
-        try:
-            plant + "abc"
-        except ValueError:
-            print(
-                "Caught ValueError: invalid literal",
-                f"for int() with base 10: '{plant}'"
-                )
-            return
     try:
         for plant in plants:
             try:
+                plant + ""
                 water_plant(plant)
-            except PlantError as msg:
+            except (TypeError, PlantError) as msg:
                 print(msg)
                 print(".. ending tests and returning to main")
                 return
